@@ -34,6 +34,8 @@ create table veiculo(
 	placa varchar(8),
     cliente_cpf int,
     modelo_codigo int,
+    cor VARCHAR(40),
+    ano int,
     primary key(placa),
     foreign key(cliente_cpf) references cliente(cpf),
     foreign key(modelo_codigo) references modelo(codmod)
@@ -71,14 +73,17 @@ insert into patio values(1, "Rua A", 45);
 insert into patio values(2, "Rua B", 20);
 insert into patio values(3, "Rua C", 100);
 
-create table veiculo(
-	placa varchar(8),
-    cliente_cpf int,
-    modelo_codigo int,
-    primary key(placa),
-    foreign key(cliente_cpf) references cliente(cpf),
-    foreign key(modelo_codigo) references modelo(codmod)
-);
+insert into veiculo values("JEG-1010", 1, 1, "Verde", 2001);
+insert into veiculo values("JJJ-2020", 1, 1, "Azul", 2010);
 
-insert into veiculo values("JEG-1010", 1, 1);
-insert into veiculo values("JJJ-2020", 1, 1);
+insert into estaciona values(1, 1, "JEG-1010", "2017-07-12", "2017-07-12", "19:00:00", "20:00:00");
+insert into estaciona values(2, 2, "JEG-1010", "2017-08-09", "2017-07-12", "16:00:00", "17:00:00");
+insert into estaciona values(3, 1, "JEG-1010", "2017-07-06", "2017-07-12", "15:00:00", "17:00:00");
+insert into estaciona values(4, 2, "JEG-1010", "2017-06-05", "2017-07-12", "14:00:00", "15:00:00");
+insert into estaciona values(5, 1, "JEG-1010", "2017-07-04", "2017-07-12", "15:00:00", "21:00:00");
+insert into estaciona values(6, 1, "JJJ-2020", "2017-07-12", "2017-07-12", "19:00:00", "20:00:00");
+insert into estaciona values(7, 2, "JJJ-2020", "2017-08-09", "2017-07-12", "16:00:00", "17:00:00");
+insert into estaciona values(8, 1, "JJJ-2020", "2017-07-06", "2017-07-12", "15:00:00", "17:00:00");
+insert into estaciona values(9, 2, "JJJ-2020", "2017-06-05", "2017-07-12", "14:00:00", "15:00:00");
+insert into estaciona values(10, 1, "JJJ-2020", "2017-07-04", "2017-07-12", "15:00:00", "21:00:00");
+
